@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Arduino Doc</title>
+</head>
+
+<body>
+    <div class="grid-contenedor ">
+        <div class="menu-contenedor">
+            <div class="menu-movil">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="navbar">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                    <header>Documentation</header>
+                </div>
+                <ul>
+                    <a class="nav-link" href="#What_is_Arduino?">
+                        <li>What is Arduino?</li>
+                    </a>
+                    <a class="nav-link" href="#Why_Arduino?">
+                        <li>Why Arduino?</li>
+                    </a>
+                    <a class="nav-link" href="#Arduino_Uno_Board_Anatomy">
+                        <li>Arduino Uno Board Anatomy</li>
+                    </a>
+                    <a class="nav-link" href="#Arduino_Software_IDE">
+                        <li>Arduino Software IDE</li>
+                    </a>
+                    <a class="nav-link" href="#Variables">
+                        <li>Variables</li>
+                    </a>
+                    <a class="nav-link" href="#Functions">
+                        <li>Functions</li>
+                    </a>
+                    <a class="nav-link" href="#Libraries">
+                        <li>Libraries</li>
+                    </a>
+                    <a class="nav-link" href="#Reference">
+                        <li>Reference</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+
+        <main id="main-doc">
+            <section id="What_is_Arduino?" class="contenedor main-section">
+                <header>What is Arduino?</header>
+                <p>Arduino is an open-source electronics platform based on easy-to-use hardware and software. <span>Arduino
+                        boards</span> are able to read inputs - light on a sensor, a finger on a button, or a Twitter
+                    message - and turn it into an output - activating a motor, turning on an LED, publishing something
+                    online. You can tell your board what to do by sending a set of instructions to the microcontroller
+                    on the board. To do so you use the <span>Arduino programming language</span> (based on Wiring), and
+                    the <span>Arduino Software (IDE)</span>, based on <span>Processing</span>. </p>
+
+                <p>
+                    Over the years Arduino has been the brain of thousands of projects, from everyday objects to
+                    complex scientific instruments. A worldwide community of makers - students, hobbyists, artists,
+                    programmers, and professionals - has gathered around this open-source platform, their contributions
+                    have added up to an incredible amount of <span>accessible knowledge</span> that can be of great
+                    help to novices and experts alike.
+                </p>
+
+                <p>
+                    Arduino was born at the Ivrea Interaction Design Institute as an easy tool for fast prototyping,
+                    aimed at students without a background in electronics and programming. As soon as it reached a
+                    wider community, the Arduino board started changing to adapt to new needs and challenges,
+                    differentiating its offer from simple 8-bit boards to products for IoT applications, wearable, 3D
+                    printing, and embedded environments. All Arduino boards are completely open-source, empowering
+                    users to build them independently and eventually adapt them to their particular needs. <span>The
+                        software</span>, too, is open-source, and it is growing through the contributions of users
+                    worldwide.
+                </p>
+            </section>
+
+            <section id="Why_Arduino?" class="contenedor main-section">
+                <header>Why Arduino?</header>
+                <p>Thanks to its simple and accessible user experience, Arduino has been used in thousands of different
+                    projects and applications. The Arduino software is easy-to-use for beginners, yet flexible enough
+                    for advanced users. It runs on Mac, Windows, and Linux. Teachers and students use it to build low
+                    cost scientific instruments, to prove chemistry and physics principles, or to get started with
+                    programming and robotics. Designers and architects build interactive prototypes, musicians and
+                    artists use it for installations and to experiment with new musical instruments. Makers, of course,
+                    use it to build many of the projects exhibited at the Maker Faire, for example. Arduino is a key
+                    tool to learn new things. Anyone - children, hobbyists, artists, programmers - can start tinkering
+                    just following the step by step instructions of a kit, or sharing ideas online with other members
+                    of the Arduino community</p>
+
+                <p>There are many other microcontrollers and microcontroller platforms available for physical
+                    computing. Parallax Basic Stamp, Netmedia's BX-24, Phidgets, MIT's Handyboard, and many others
+                    offer similar functionality. All of these tools take the messy details of microcontroller
+                    programming and wrap it up in an easy-to-use package. Arduino also simplifies the process of
+                    working with microcontrollers, but it offers some advantage for teachers, students, and interested
+                    amateurs over other systems:</p>
+
+                <ul>
+                    <li><span>Inexpensive</span> - Arduino boards are relatively inexpensive compared to other
+                        microcontroller platforms. The least expensive version of the Arduino module can be assembled
+                        by hand, and even the pre-assembled Arduino modules cost less than $50
+                    </li>
+                    <li><span>Cross-platform</span> - The Arduino Software (IDE) runs on Windows, Macintosh OSX, and
+                        Linux operating systems. Most microcontroller systems are limited to Windows.</li>
+                    <li><span>Simple, clear programming environment</span> - The Arduino Software (IDE) is easy-to-use
+                        for beginners, yet flexible enough for advanced users to take advantage of as well. For
+                        teachers, it's conveniently based on the Processing programming environment, so students
+                        learning to program in that environment will be familiar with how the Arduino IDE work</li>
+                    <li><span>Open source and extensible software</span> - The Arduino software is published as open
+                        source tools, available for extension by experienced programmers. The language can be expanded
+                        through C++ libraries, and people wanting to understand the technical details can make the leap
+                        from Arduino to the AVR C programming language on which it's based. Similarly, you can add
+                        AVR-C code directly into your Arduino programs if you want to.</li>
+                    <li><span>Open source and extensible hardware</span> - The plans of the Arduino boards are
+                        published under a Creative Commons license, so experienced circuit designers can make their own
+                        version of the module, extending it and improving it. Even relatively inexperienced users can
+                        build the breadboard version of the module in order to understand how it works and save money.</li>
+                </ul>
+
+            </section>
+
+            <section id="Arduino_Uno_Board_Anatomy" class="contenedor main-section">
+                <header>Arduino Uno Board Anatomy</header>
+                <p>
+                    Arduino/Genuino boards senses the environment by receiving inputs from many sensors, and affects
+                    their surroundings by controlling lights, motors, and other actuators. Arduino/Genuino boards are
+                    the microcontroller development platform that will be at the heart of your projects. When making
+                    something you will be building the circuits and interfaces for interaction, and telling the
+                    microcontroller how to interface with other components. Here the anatomy of Arduino/Genuino Uno.
+                </p>
+
+                <img src="https://www.arduino.cc/en/uploads/Main/BoardAnatomy.svg" alt="arduino board">
+                <p></p>
+
+                <ol>
+                    <li>Digital pins Use these pins with digitalRead(), digitalWrite(), and analogWrite().
+                        analogWrite() works only on the pins with the PWM symbol.</li>
+                    <li>Pin 13 LED The only actuator built-in to your board. Besides being a handy target for your
+                        first blink sketch, this LED is very useful for debugging.</li>
+                    <li>Power LED Indicates that your Genuino is receiving power. Useful for debugging.</li>
+                    <li>ATmega microcontroller The heart of your board.</li>
+                    <li>Analog in Use these pins with analogRead().</li>
+                    <li>GND and 5V pins Use these pins to provide +5V power and ground to your circuits.</li>
+                    <li>Power connector This is how you power your Genuino when it’s not plugged into a USB port for
+                        power. Can accept voltages between 7-12V.</li>
+                    <li>TX and RX LEDs These LEDs indicate communication between your Genuino and your computer. Expect
+                        them to flicker rapidly during sketch upload as well as during serial communication. Useful for
+                        debugging.</li>
+                    <li>USB port Used for powering your Genuino Uno, uploading your sketches to your Genuino, and for
+                        communicating with your Genuino sketch (via Serial. println() etc.).</li>
+                    <li>Reset button Resets the ATmega microcontroller.</li>
+                </ol>
+
+            </section>
+
+            <section id="Arduino_Software_IDE" class="contenedor main-section">
+                <header>Arduino Software IDE</header>
+                <p>
+                    The Arduino Integrated Development Environment - or Arduino Software (IDE) - contains a text editor
+                    for writing code, a message area, a text console, a toolbar with buttons for common functions and a
+                    series of menus. It connects to the Arduino and Genuino hardware to upload programs and communicate
+                    with them.
+                </p>
+
+                <p>
+                    Programs written using Arduino Software (IDE) are called sketches. These sketches are written in
+                    the text editor and are saved with the file extension .ino. The editor has features for
+                    cutting/pasting and for searching/replacing text. The message area gives feedback while saving and
+                    exporting and also displays errors. The console displays text output by the Arduino Software (IDE),
+                    including complete error messages and other information. The bottom righthand corner of the window
+                    displays the configured board and serial port. The toolbar buttons allow you to verify and upload
+                    programs, create, open, and save sketches, and open the serial monitor.
+                </p>
+            </section>
+
+            <section id="Variables" class="contenedor main-section">
+                <header>Variables</header>
+                <p>A variable is a place to store a piece of data. It has a name, a value, and a type. For example,
+                    this statement (called a declaration):</p>
+
+                <p><code>
+                int pin = 13;
+                </code></p>
+
+                <p>creates a variable whose name is <span>pin</span>, whose value is <span>13</span>, and whose type is
+                    int. Later on in the program, you can refer to this variable by its name, at which point its value
+                    will be looked up and used. For example, in this statement:</p>
+                
+                <p>
+                    <code>
+                            pinMode(pin, OUTPUT);
+                    </code>
+                </p>
+                <p>
+                        it is the value of pin (13) that will be passed to the pinMode() function. In this case, you don't actually need to use a variable, this statement would work just as well:
+                </p>
+                <p>
+                    <code>
+                            pinMode(13, OUTPUT);
+                    </code>
+                </p>
+                <p>
+                        The advantage of a variable in this case is that you only need to specify the actual number of the pin once, but you can use it lots of times. So if you later decide to change from pin 13 to pin 12, you only need to change one spot in the code. Also, you can use a descriptive name to make the significance of the variable clear (e.g. a program controlling an RGB LED might have variables called redPin, greenPin, and bluePin).
+                </p>
+                <p>
+                        A variable has other advantages over a value like a number. Most importantly, you can change the value of a variable using an assignment (indicated by an equals sign). For example:
+                </p>
+                <p>
+                    <code>
+                            pin = 12;
+                    </code>
+                </p>
+
+                <p>
+                        will change the value of the variable to 12. Notice that we don't specify the type of the variable: it's not changed by the assignment. That is, the name of the variable is permanently associated with a type; only its value changes. [1] Note that you have to declare a variable before you can assign a value to it. If you include the preceding statement in a program without the first statement above, you'll get a message like: "error: pin was not declared in this scope".
+
+                        When you assign one variable to another, you're making a copy of its value and storing that copy in the location in memory associated with the other variable. Changing one has no effect on the other. For example, after:
+                </p>
+
+                <p>
+                    <code>
+                            int pin = 13;
+                            int pin2 = pin;
+                            pin = 12; 
+                    </code>
+                </p>
+
+                <p>
+                        only pin has the value 12; pin2 is still 13.
+                </p>
+            </section>
+
+            <section id="Functions" class="contenedor main-section">
+                <header>Functions</header>
+                <p>
+                    Segmenting code into functions allows a programmer to create modular pieces of code that perform a defined task and then return to the area of code from which the function was "called". The typical case for creating a function is when one needs to perform the same action multiple times in a program.
+                </p>
+
+                <p>
+                    For programmers accustomed to using BASIC, functions in Arduino provide (and extend) the utility of using subroutines (GOSUB in BASIC).
+                </p>
+
+                <p>
+                    Standardizing code fragments into functions has several advantages:
+                </p>
+
+                <ul>
+                    <li>
+                        Functions help the programmer stay organized. Often this helps to conceptualize the program.
+                    </li>
+                    <li>
+                        Functions codify one action in one place so that the function only has to be thought out and debugged once.
+                    </li>
+                    <li>
+                        This also reduces chances for errors in modification, if the code needs to be changed.
+                    </li>
+                    <li>
+                        Functions make the whole sketch smaller and more compact because sections of code are reused many times.
+                    </li>
+                    <li>
+                        They make it easier to reuse code in other programs by making it more modular, and as a nice side effect, using functions also often makes the code more readable.
+                    </li>
+                </ul>
+                <p>
+                    There are two required functions in an Arduino sketch, setup() and loop(). Other functions must be created outside the brackets of those two functions. As an example, we will create a simple function to multiply two numbers.
+                </p>
+
+                <img src="https://www.arduino.cc/en/uploads/Reference/FuncAnatomy.png" alt="c function">
+
+                <p>
+                    To "call" our simple multiply function, we pass it parameters of the datatype that it is expecting:
+                </p>
+
+                <p>
+                    <code>
+                        void loop(){ 
+                            int i = 2;
+                            int j = 3;
+                            int k;
+                            
+                            k = myMultiplyFunction(i, j); // k now contains 6
+                            }
+                    </code>
+                </p>
+
+                <p>
+                    Our function needs to be declared outside any other function, so "myMultiplyFunction()" can go either above or below the "loop()" function.
+                </p>
+
+                <p>
+                    The entire sketch would then look like this:
+                </p>
+
+                <p>
+                    <pre>
+                        void setup(){
+                            Serial.begin(9600);
+                            }
+                            
+                            void loop() {
+                            int i = 2;
+                            int j = 3;
+                            int k;
+                            
+                            k = myMultiplyFunction(i, j); // k now contains 6
+                            Serial.println(k);
+                            delay(500);
+                            }
+                            
+                            int myMultiplyFunction(int x, int y){
+                            int result;
+                            result = x * y;
+                            return result;
+                            }
+                    </pre>
+                </p>
+            </section>
+
+            <section id="Libraries" class="contenedor main-section">
+                <header>Libraries</header>
+                <p>
+                    Libraries are a collection of code that makes it easy for you to connect to a sensor, display, module, etc. For example, the built-in LiquidCrystal library makes it easy to talk to character LCD displays. There are hundreds of additional libraries available on the Internet for download. The built-in libraries and some of these additional libraries are listed in the reference. To use the additional libraries, you will need to install them.
+                </p>
+                <p>
+                    To install a new library into your Arduino IDE you can use the Library Manager (available from IDE version 1.6.2). Open the IDE and click to the "Sketch" menu and then Include Library > Manage Libraries.
+                </p>
+
+                <img src="https://www.arduino.cc/en/uploads/Guide/LibraryManager_1.png" alt="library manager">
+
+                <p>
+                    Then the Library Manager will open and you will find a list of libraries that are already installed or ready for installation. In this example we will install the Bridge library. Scroll the list to find it, click on it, then select the version of the library you want to install. Sometimes only one version of the library is available. If the version selection menu does not appear, don't worry: it is normal.
+                </p>
+
+                <img src="https://www.arduino.cc/en/uploads/Guide/LibraryManager_2.png" alt="search library">
+
+                <p>
+                    Finally click on install and wait for the IDE to install the new library. Downloading may take time depending on your connection speed. Once it has finished, an Installed tag should appear next to the Bridge library. You can close the library manager.
+                </p>
+
+                <img src="https://www.arduino.cc/en/uploads/Guide/LibraryManager_3.png" alt="install library">
+
+                <p>
+                    You can now find the new library available in the Sketch > Include Library menu.
+                </p>
+            </section>
+
+            <section id="Reference" class="contenedor main-section">
+                <header>Reference</header>
+                <p>
+                    You can find more information in <a href="https://www.arduino.cc/en/Tutorial/Foundations">Foundations</a>
+                </p>
+            </section>
+        </main>
+
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
